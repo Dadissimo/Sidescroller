@@ -41,13 +41,12 @@ func looseHealth(dmg):
 		
 func processDeath():
 	isDead = true
-	print(entityName + ' died')
+	print(entityName + ' cleared')
 	
 func looseEnergy(dmg):
 	currentEnergy = currentEnergy - dmg
 	
-func printStats(message = ''):
-	if (message != ''): print(message)
+func printStats():
 	print('Entity name: ' + entityName)
 	print('CurrentHealth: ' + str(currentHealth))
 	print('CurrentEnergy: ' + str(currentEnergy))

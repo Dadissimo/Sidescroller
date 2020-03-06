@@ -1,12 +1,13 @@
 extends "res://Scripts/Action.gd"
 
-var damage
+var multiplier
 
-func setup(_actionName, _damage, _targetStat, _cost):
+func setup(_actionName, _multiplier, _targetStat, _cost):
 	baseSetup(_actionName, _targetStat, _cost)
-	damage = _damage
+	multiplier = _multiplier
 
 func execute(executioner, target):
 	print(executioner.entityName + ' executed ' + actionName)
-	target.looseHealth(executioner.currentAttack)
+	target.looseHealth(multiplier * executioner.currentAttack)
 	executioner.currentEnergy = executioner.currentEnergy - cost 
+
