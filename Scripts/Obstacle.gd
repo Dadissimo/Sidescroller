@@ -1,1 +1,1 @@
-extends "res://Scripts/Entity.gd"
+extends "res://Scripts/Opponent.gd"

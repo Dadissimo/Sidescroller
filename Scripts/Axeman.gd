@@ -1,10 +1,11 @@
 extends "res://Scripts/Character.gd"
 
+const attack = preload("res://Scripts/Attack.gd")
+
 func _ready():
-	setupStats(12, 8, 4, 2)
+	setupStats('Axeman', 12, 8, 4, 2)
+	if (Globals.printStats): printStats()
+	addAction(attack.new())
 
 func attack(target):
-	target.looseHealth(currentAttack)
-	print('Axeman is attacking')
-	print('Axeman did ' + str(currentAttack) + ' damage')
-	print('Enemy has ' + str(target.currentHealth) + ' health left')
+	actions[0].execute(self, target)

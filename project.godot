@@ -19,6 +19,10 @@ config/name="Sidescroller"
 run/main_scene="res://Scenes/TestScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [input]
 
 debugPrint={
