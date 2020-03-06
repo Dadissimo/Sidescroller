@@ -1,10 +1,12 @@
 extends "res://Scripts/Character.gd"
 
-const attack = preload("res://Scripts/Attack.gd")
+const attackLoader = preload("res://Scripts/Attack.gd")
+const idleLoader = preload("res://Scripts/Idle.gd")
 
 func _ready():
 	setupStats('Axeman', 12, 8, 4, 2)
-	addAction(attack.new())
+	addAction(attackLoader.new())
+	addAction(idleLoader.new())
 
-func attack(target):
-	actions[0].execute(self, target)
+func attack(target, actionIndex):
+	actions[actionIndex].execute(self, target)
