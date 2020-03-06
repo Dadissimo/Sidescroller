@@ -28,6 +28,7 @@ func setupStats(_name, _health, _energy, _attack, _defense):
 	currentEnergy = _energy
 	currentAttack = _attack
 	currentDefense = _defense
+	if (Globals.printStats): printStats()
 
 func looseHealth(dmg):
 	var blocked = max(1, dmg - currentDefense)

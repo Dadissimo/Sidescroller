@@ -16,6 +16,6 @@ func _process(_delta):
 		return
 		
 	if (!playerTurn):
-		oponent.executeTurn()
+		oponent.executeTurn(player)
 		playerTurn = true
 		return
