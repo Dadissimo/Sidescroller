@@ -46,6 +46,9 @@ func processDeath():
 func looseEnergy(dmg):
 	currentEnergy = currentEnergy - dmg
 	
+func getStats():
+	return [entityName, currentHealth, currentEnergy, currentAttack, currentDefense]
+	
 func printStats():
 	print('Entity name: ' + entityName)
 	print('CurrentHealth: ' + str(currentHealth))

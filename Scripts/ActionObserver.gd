@@ -18,9 +18,6 @@ func _init(_player, _opponent, _menu):
 		actions.append(actionRect)
 		
 	actions[selectedAction].modulate = Color(0,0,1)
-
-func setActions(_actions)	:
-	actions = _actions
 	
 func processTurn():
 	if (Input.is_action_just_released("ui_left")):
